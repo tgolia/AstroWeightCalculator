@@ -1,0 +1,69 @@
+h1 {
+	color: white;
+	text-align: center;
+	font-family: 'Chewy', cursive;
+	font-size: 4em;
+	margin: 10px 0;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+}
+
+body {
+	background-color: hotpink;
+}
+
+button {
+	background-color: white; /* Green */
+    border: none;
+    color: hotpink;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+button:hover {
+	color: firebrick;
+}
+
+button:active {
+	color: hotpink;
+	background: black;
+}
+
+.button {
+	text-align: center;
+}
+
+p {
+	color: white;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.inputFields {
+	text-align: center;
+	margin: 20px 0 5px;
+}
+
+.img {
+	text-align: center;
+}
+
+img {
+	max-width: 50%
+}
+
+input {
+
+}
+
+select {
+
+}

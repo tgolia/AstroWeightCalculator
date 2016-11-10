@@ -12,11 +12,6 @@ var planets = [
     { planet: 'Pluto', gravity: 0.06 }
 ];
 
-function roundToDecimal(num,dec) {
-      var rounded = (Math.round(num * Math.pow(10,dec)) / Math.pow(10,dec)).toFixed(dec);
-      return rounded;
-    }
-
 //1. How to dynamically generate the select element
 
 for (var i = 0; i < planets.length; i++) {
@@ -46,34 +41,13 @@ for (var i = 0; i < planets.length; i++) {
         var planetName = selectedOption.text;
         var planetValue = selectedOption.value;
 
-        var decimals = 2;
+        var userWeightOnPlanet = weight * planetValue;
 
-        var userWeightOnPlanet = roundToDecimal(weight * planetValue, decimals);
-        var barbieWeightOnPlanet = roundToDecimal(userWeightOnPlanet * .5, decimals)
-
-        if (planetName === 'Sun' || planetName === 'Moon') {
-            var message = 'If you were on the ' + planetName + ', you would weigh ' + userWeightOnPlanet + ' lbs.';
-        } else {
-            var message = 'If you were on ' + planetName + ', you would weigh ' + userWeightOnPlanet + ' lbs.';
-        }
-
-        if (planetName === 'Sun' || planetName === 'Moon') {
-            var messageBarbie = 'If Barbie was on the ' + planetName + ', she would weigh ' + barbieWeightOnPlanet + ' lbs.';
-        } else {
-            var messageBarbie = 'If Barbie was on ' + planetName + ', she would weigh ' + barbieWeightOnPlanet + ' lbs.';
-        }
+        var message = 'If you were on ' + planetName + ', you would weigh ' + userWeightOnPlanet + 'lbs.';
 
         var output = document.getElementById('output');
-        var outputBarbie = document.getElementById('outputBarbie');
 
         // Assign the message to the output element we just fetched from the DOM
-        if (isNaN(weight) == true || weight == '') {
-          output.innerHTML = 'Please enter a number.';
-          outputBarbie.innerHTML = '';
-        } else {
-            output.innerHTML = message;
-            outputBarbie.innerHTML = messageBarbie;
-          }
+        output.innerHTML = message;
     }
 }
-

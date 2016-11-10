@@ -1,14 +1,30 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Astro Weight Calculator</title>
-	</head>
-	<body>
-		<input id="inputWeight" type="text">
-		<select name="" id="selectPlanet"></select>
-		<button id="calculateWeight">Calculate Weight</button>
-		<p id="output"></p>
 
-		<script src="index.js"></script>
-	</body>
+<head>
+    <title>Astro Weight Calculator</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<h1>Barbie's Astro Weight Calculator&trade;</h1>
+	<div class="img">
+		<img class="barbie" src="img/barbie.jpg">
+	</div>
+	<h2>Calculate your weight on different planets!</h2>
+	<div class="inputFields">
+  		<input id="inputWeight" type="text" placeholder="Enter your weight here">
+    	<select name="" id="selectPlanet"></select>
+	</div>
+    <div class="button">
+    	<button id="calculateWeight">Calculate Weight</button>
+    </div>
+    <br>
+    <p id="output"></p>
+    <p id="outputBarbie"></p>
+    <script src="index.js"></script>
+</body>
+
 </html>
