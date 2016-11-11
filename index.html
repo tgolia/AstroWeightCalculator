@@ -11,9 +11,10 @@
 <body>
 	<h1>Barbie's Astro Weight Calculator&trade;</h1>
 	<div class="img">
-		<img class="barbie" src="img/barbie.jpg">
+		<img id="gif" src="img/dancing.gif">
+		<!-- <img id="loadingImage" src="ajax-loader.gif" style="visibility:hidden"/> -->
 	</div>
-	<h2>Calculate your weight on different planets!</h2>
+	<h2 id="comment">Calculate your weight on different planets!</h2>
 	<div class="inputFields">
   		<input id="inputWeight" type="text" placeholder="Enter your weight here">
     	<select name="" id="selectPlanet"></select>
@@ -24,6 +25,7 @@
     <br>
     <p id="output"></p>
     <p id="outputBarbie"></p>
+	<h2 id="sassyComment" style="visibility: hidden">Wow, Barbie weighs a lot less than you...</h2>
     <script src="index.js"></script>
 </body>
 
